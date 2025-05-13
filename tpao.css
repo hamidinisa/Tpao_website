@@ -1,0 +1,203 @@
+body {
+    background-image: url('petrol.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    transition: background-image 1s ease-in-out; 
+    
+} 
+
+html, body {
+    height: 100%; 
+    margin: 0;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+}
+
+
+.panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; 
+    background-color: rgba(255, 255, 255,0.9); 
+    padding: 0 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    box-sizing:border-box;                                                                 
+}
+
+.logo {
+    width: 120px;
+    object-fit: contain;
+    margin-left: 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.menu-item {
+    position: relative;
+    margin-left: 20px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.menu-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+}
+
+.submenu li {
+    margin-bottom: 0;
+}
+
+.submenu li a {
+    color: #555;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.submenu li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+
+.info-panel {
+    position:absolute;
+    top: 300px;
+    left: 50px;
+    width: 500px;
+    height: 200px;
+    background-color: rgba(124, 43, 43, 0.5);
+    color: rgb(255, 253, 253);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition:opacity 1s ease-in-out;
+}
+  .text {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;}
+
+
+.text.active {
+
+     opacity: 1;
+}
+.content {
+    flex: 1; 
+    padding-bottom: 70px;
+    padding-top:90%;
+    padding-left: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.panel-content {
+    position:static;
+    width:80%;
+    height: 80%;
+    max-width: 400px;
+    max-height: 300px;
+    background-color: rgba(150, 84, 84, 0.8);
+
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgb(19, 15, 15);
+    border-radius: 10px;
+   }
+    
+    
+    .panel-content.active {
+        opacity: 1;
+        visibility: visible; 
+      
+    }
+   
+   
+    .panel-content h2 {
+       color:antiquewhite;
+     cursor: pointer; 
+     transition: transform 0.5s ease-in-out;
+    }
+    h2:hover {
+        transform: rotate(-7deg) scale(1.05);
+    }
+    
+    .panel-content p {
+        display: none; 
+        margin-top: 10px; 
+      color:antiquewhite
+    }
+    
+    .panel-content.active p {
+        display: block; 
+        
+    }
+  
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer .footer-content {
+    margin: 0 auto;
+}
