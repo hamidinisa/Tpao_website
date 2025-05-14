@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #d70404;
+}
+
+.panel {
+    position: fixed; /* Paneli sabitler */
+    top: 0;
+    left: 0;
+    width: 100%; /* Panelin genişliği */
+    height: 70px; /* Panelin yüksekliği */
+    background-color: rgb(255, 255, 255); /* Beyaz arka plan */
+    padding: 0 20px; /* İç boşluk */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Logo ve menüyü ekranın iki ucuna yerleştirir */
+    align-items: center; /* Dikey ortalama */
+    box-sizing:border-box;                                                                 
+}
+
+.logo {
+    width: 120px;
+    object-fit: contain;
+    margin-left: 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    white-space:nowrap;
+}
+
+.menu-item {
+    position: relative; /* Alt menüyü konumlandırmak için */
+    margin-left: 20px; /* Menü item'ları arasında boşluk */
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.menu-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 100%; /* Menü öğesinin hemen altında başlar */
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 120px; /* Sub menünün minimum genişliği */
+}
+
+.submenu li {
+    margin-bottom: 0;
+}
+
+.submenu li a {
+    color: #555;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.submenu li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Menü öğesine fare ile geldiğinde alt menü görünür */
+.menu-item:hover .submenu {
+    display: block;
+}
+main {
+    padding: 20px;
+}
+
+.about {
+    background-color: #fcfcfc;
+    border: #540808;
+    border-style: double;
+    border-width: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.about h1, .about h2 {
+    color: #333;
+}
+
+.about p {
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-content {
+    margin: 0 auto;
+}
