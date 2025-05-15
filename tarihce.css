@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #d70404;
+}
+
+.panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 70px; 
+    background-color: rgb(255, 255, 255); 
+    padding: 0 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-sizing:border-box;                                                                 
+}
+
+.logo {
+    width: 120px;
+    object-fit: contain;
+    margin-left: 30px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.menu-item {
+    position: relative;
+    margin-left: 20px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.menu-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+}
+
+.submenu li {
+    margin-bottom: 0;
+}
+
+.submenu li a {
+    color: #555;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.submenu li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+.about {
+    background-color: #fcfcfc;
+    border: #540808;
+    border-style: double;
+    border-width: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    max-width: 800px;
+
+}
+
+.about h1 {
+    color: #333;
+    transition: transform 0.5s ease;
+
+}
+
+h1:hover {
+            transform: rotate(-5deg) scale(1.05);}
+
+.about p {
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-content {
+    margin: 0 auto;
+}
